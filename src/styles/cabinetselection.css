@@ -1,0 +1,154 @@
+.cabinet-card {
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+
+.cabinet-card.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.cabinet-card:not(.disabled):hover {
+    transform: scale(1.05);
+}
+
+
+.cabinet-body{
+    background-color: #6C49B4!important;
+
+    padding: 1.5rem 1rem;
+    text-align: center;
+    height: 260px;
+    position: relative;
+    z-index: -99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+
+.cabinet-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cabinet-text {
+    margin: 10px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.image-container-cabinet {
+    width: 100%;
+    position: relative;
+    overflow: visible;
+    margin-bottom: -40px;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    z-index: 1;
+}
+
+
+.cabinet-img-top {
+    background-color: #463F4E;
+    width: 80%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cabinet-content{
+    background-color: #6C49B4;
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    height: 250px;
+    position: relative;
+    z-index: -99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.cabinet-checkmark {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F1F1F;
+    z-index: 10;
+}
+
+.cabinet-checkmark svg {
+    width: 16px;
+    height: 16px;
+    fill: white; /* Sørg for, at SVG har en farve */
+}
+
+.cabinet-card.selected .cabinet-checkmark {
+    color: white;
+    background-color: #1F1F1F;
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .cabinet-image-container {
+        margin-bottom: -30px;
+    }
+
+
+    .cabinet-content {
+        padding: 1rem;
+        min-height: 200px;
+    }
+
+
+    .cabinet-title {
+        font-size: 1rem;
+    }
+
+
+    .cabinet-text {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+    .text-tlf{
+        width: 75%!important;
+    }
+    .cabinet-card {
+        max-width: 350px;
+    }
+
+
+    .cabinet-content {
+        min-height: 180px;
+    }
+
+    .cabinet-image-container {
+        min-width: 350px;
+    }
+
+
+    .cabinet-title {
+        font-size: 1rem;
+    }
+}
