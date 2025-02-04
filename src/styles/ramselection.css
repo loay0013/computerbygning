@@ -1,0 +1,184 @@
+.ram-card {
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+.ram-card.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.ram-card:not(.disabled):hover {
+    transform: scale(1.05);
+}
+
+
+.ram-img-top {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.image-container-ram {
+    width: 100%;
+    position: relative;
+    overflow: visible;
+    margin-bottom: -40px;
+    display: flex;
+    justify-content: center;
+    height: 350px;
+}
+
+
+.ram-body {
+    background-color: #6c5ce7;
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    height: 250px;
+    position: relative;
+    z-index: -99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+
+.ram-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+.ram-text {
+    margin: 10px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+
+.checkmark-ram {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F1F1F;
+    z-index: 10;
+}
+.checkmark-ram svg {
+    width: 16px;
+    height: 16px;
+    fill: white; /* Sørg for, at SVG har en farve */
+}
+
+.ram-body.selected .checkmark {
+    color: white;
+    background-color: #1F1F1F;
+}
+
+
+.game-images-ram {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+
+.game-image-ram {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    display: block; /* Dette sikrer at billedet vises korrekt */
+}
+
+
+/* Tilføj hover effekt */
+.game-image-ram:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.hover-state {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Responsive styles */
+@media (min-width: 768px) and (max-width: 991px) {
+    iframe {
+        height: 330px;
+    }
+
+
+    .ram-card {
+        max-width: 400px;
+    }
+
+
+    .image-container-ram {
+        margin-bottom: -30px;
+    }
+
+
+    .ram-body {
+        padding: 1rem;
+        min-height: 200px;
+    }
+
+
+    .ram-title {
+        font-size: 1rem;
+    }
+
+
+    .ram-text {
+        font-size: 0.8rem;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+    .text-tlf {
+        width: 75% !important;
+    }
+
+
+    .ram-card {
+        max-width: 80%;
+    }
+
+
+    .ram-body {
+        min-height: 100px;
+    }
+
+
+    .ram-title {
+        font-size: 1rem;
+    }
+
+
+}
+

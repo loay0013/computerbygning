@@ -1,0 +1,19 @@
+.step-card {
+    background-color: #6C49B4;
+
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    height: 230px;
+    width: 230px;
+}
+
+.step-card:hover {
+    transform: scale(1.05);
+}
+
+.step-icon {
+    font-size: 40px;
+    color: #6C49B4;
+}
+

@@ -1,0 +1,114 @@
+.game-card {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.game-card.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.game-card:not(.disabled):hover {
+    transform: scale(1.05);
+}
+
+
+.game-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+.checkbox-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F1F1F;
+    z-index: 10;
+}
+
+.checkbox-container svg {
+    width: 16px;
+    height: 16px;
+    fill: white; /* Sørg for, at SVG har en farve */
+}
+
+
+.game-card.selected .checkbox-container {
+    color: white;
+    background-color: #1F1F1F;
+}
+
+
+/* Container and grid styling */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+/* Tablet */
+@media (max-width: 991px) {
+    .game-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 500px;
+
+
+    }
+
+
+    .game-card {
+        max-width: 240px;
+    }
+
+
+    .game-image {
+        height: 240px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 576px) {
+    .game-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        max-width: 350px;
+
+
+    }
+
+
+    .game-card {
+        max-width: 160px;
+    }
+
+
+    .game-image {
+        height: 160px;
+    }
+
+
+    .checkbox-container {
+        width: 20px;
+        height: 20px;
+        bottom: 8px;
+        right: 8px;
+    }
+}
+

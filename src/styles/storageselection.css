@@ -1,0 +1,152 @@
+.ssd-card {
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+.ssd-card.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.ssd-card:not(.disabled):hover {
+    transform: scale(1.05);
+}
+
+
+.image-container-ssd {
+    width: 100%;
+    position: relative;
+    overflow: visible;
+    margin-bottom: -40px;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+}
+
+
+.card-img-top-ssd {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.ssd-content {
+    background-color: #6c5ce7;
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    height: 250px;
+    position: relative;
+    z-index: -99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.ssd-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0;  /* Ensure no extra margin at the top */
+
+
+}
+
+
+.ssd-text {
+    margin: 10px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+
+.checkmark-ssd {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F1F1F;
+    z-index: 10;
+}
+.checkmark-ssd svg {
+    width: 16px;
+    height: 16px;
+    fill: white; /* Sørg for, at SVG har en farve */
+}
+
+.ssd-card.selected .checkmark {
+    color: white;
+    background-color: #1F1F1F;
+}
+
+.highlight-green {
+    color: #4ade80;
+    font-weight: bold;
+}
+
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    iframe{
+        height: 330px;
+    }
+    .ssd-card {
+        max-width: 400px;
+    }
+
+
+    .image-container {
+        margin-bottom: -30px;
+    }
+
+
+    .ssd-content {
+        padding: 1rem;
+        min-height: 200px;
+    }
+
+
+    .ssd-title {
+        font-size: 1rem;
+    }
+
+
+    .ssd-text {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+    .text-tlf{
+        width: 75%!important;
+    }
+    .ssd-card {
+        max-width: 80%;
+    }
+
+
+    .ssd-content {
+        min-height: 180px;
+    }
+
+
+    .ssd-title {
+        font-size: 1rem;
+    }
+}
+

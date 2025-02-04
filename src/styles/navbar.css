@@ -1,0 +1,28 @@
+.navbar-toggler {
+    background-color: transparent;
+    border: none;
+    transition: none;
+    color: rgba(255, 21, 128, 0);
+}
+.navbar-style{
+    background: #1a1a1a;
+    z-index: 100;
+}
+.nbg{
+    background-color: #1a1a1a;
+    width: 100vh;
+}
+.bg-nav{
+    background: #131313;
+}
+.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: rgb(26, 26, 26) !important;
+}
+.nav-font{
+    font-weight: normal;
+}
+
+
+
+
